@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "alias": ["dashboard.willcodefor.beer"],
+  "builds": [
+    { "src": "packages/web/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/packages/web/$1"
+    }
+  ],
+  "regions": ["arn"]
+}
